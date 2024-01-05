@@ -39,15 +39,16 @@ function isPositive(number) {
  *  -0.1, 0, 0.2  => 0.2
  */
 function getMaxNumber(a, b, c) {
-  if (a >= b && a >= c) {
-    return a;
+  let d;
+  if (a >= b) {
+    d = a;
+  } else {
+    d = b;
   }
-  if (b >= a && b >= c) {
-    return b;
+  if (c >= d) {
+    d = c;
   }
-  if (c >= a && c >= b) {
-    return c;
-  }
+  return d;
 }
 
 /**
